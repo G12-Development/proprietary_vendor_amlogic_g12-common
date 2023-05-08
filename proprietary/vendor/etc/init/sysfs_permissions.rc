@@ -149,9 +149,6 @@ on init
     chmod 0664 /sys/class/display/mode
     chown system system /sys/class/display/mode
 
-    chmod 0664 /sys/class/display/fr_hint
-    chown system system /sys/class/display/fr_hint
-
     chmod 0664 /sys/class/display/axis
     chown system graphics /sys/class/display/axis
 
@@ -164,8 +161,6 @@ on init
 
     chmod 0664 /sys/class/graphics/fb0/free_fb_mem
     chown system graphics /sys/class/graphics/fb0/free_fb_mem
-    chmod 0664 /sys/class/graphics/fb0/force_free_mem
-    chown system graphics /sys/class/graphics/fb0/force_free_mem
 
     #ppmgr
     chmod 0664 /sys/class/ppmgr/angle

@@ -7,7 +7,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/odm/etc/firmware/firmware.le:$(TARGET_COPY_OUT_ODM)/etc/firmware/firmware.le \
-    vendor/amlogic/g12-common/proprietary/odm/etc/tvconfig/pq/pq.db:$(TARGET_COPY_OUT_ODM)/etc/tvconfig/pq/pq.db \
     vendor/amlogic/g12-common/proprietary/odm/etc/tvconfig/pq/pq_default.ini:$(TARGET_COPY_OUT_ODM)/etc/tvconfig/pq/pq_default.ini \
     vendor/amlogic/g12-common/proprietary/odm/lib/libHwAudio_dcvdec.so:$(TARGET_COPY_OUT_ODM)/lib/libHwAudio_dcvdec.so \
     vendor/amlogic/g12-common/proprietary/odm/lib/libHwAudio_dtshd.so:$(TARGET_COPY_OUT_ODM)/lib/libHwAudio_dtshd.so \
@@ -17,6 +16,7 @@ PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/odm/usr/keylayout/Vendor_000d_Product_3838.kl:$(TARGET_COPY_OUT_ODM)/usr/keylayout/Vendor_000d_Product_3838.kl \
     vendor/amlogic/g12-common/proprietary/odm/usr/keylayout/Vendor_000d_Product_3839.kl:$(TARGET_COPY_OUT_ODM)/usr/keylayout/Vendor_000d_Product_3839.kl \
     vendor/amlogic/g12-common/proprietary/odm/usr/keylayout/Vendor_7545_Product_0021.kl:$(TARGET_COPY_OUT_ODM)/usr/keylayout/Vendor_7545_Product_0021.kl \
+    vendor/amlogic/g12-common/proprietary/odm/etc/tvconfig/pq/pq.db:$(TARGET_COPY_OUT_ODM)/etc/tvconfig/pq/pq.db \
     vendor/amlogic/g12-common/proprietary/product/etc/permissions/com.google.android.tv.dfuservice.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.tv.dfuservice.xml \
     vendor/amlogic/g12-common/proprietary/product/etc/permissions/privapp-permissions-atv-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-atv-product.xml \
     vendor/amlogic/g12-common/proprietary/product/etc/permissions/privapp-permissions-deadpool.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-deadpool.xml \
@@ -25,6 +25,10 @@ PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/product/etc/sysconfig/google-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
     vendor/amlogic/g12-common/proprietary/product/etc/sysconfig/google-lineage.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google-lineage.xml \
     vendor/amlogic/g12-common/proprietary/product/etc/sysconfig/google_atv.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google_atv.xml \
+    vendor/amlogic/g12-common/proprietary/recovery/root/sbin/mesondisplay.cfg:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/mesondisplay.cfg \
+    vendor/amlogic/g12-common/proprietary/recovery/root/system/bin/systemcontrol_static:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/systemcontrol_static \
+    vendor/amlogic/g12-common/proprietary/recovery/root/system/lib/hw/android.hardware.boot@1.0-impl-1.1.droidlogic.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib/hw/android.hardware.boot@1.0-impl-1.1.droidlogic.so \
+    vendor/amlogic/g12-common/proprietary/recovery/root/system/lib/hw/android.hardware.fastboot@1.0-impl-amlogic.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib/hw/android.hardware.fastboot@1.0-impl-amlogic.so \
     vendor/amlogic/g12-common/proprietary/system/etc/permissions/privapp-permissions-google.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-google.xml \
     vendor/amlogic/g12-common/proprietary/system_ext/etc/permissions/privapp-permissions-google-se.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-google-se.xml \
     vendor/amlogic/g12-common/proprietary/vendor/bin/DecInfo_test:$(TARGET_COPY_OUT_VENDOR)/bin/DecInfo_test \
@@ -32,6 +36,7 @@ PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/vendor/bin/esplayer:$(TARGET_COPY_OUT_VENDOR)/bin/esplayer \
     vendor/amlogic/g12-common/proprietary/vendor/bin/hdcp_tx22:$(TARGET_COPY_OUT_VENDOR)/bin/hdcp_tx22 \
     vendor/amlogic/g12-common/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-droidlogic:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.0-service-droidlogic \
+    vendor/amlogic/g12-common/proprietary/vendor/bin/hw/android.hardware.boot@1.1-service.droidlogic:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.boot@1.1-service.droidlogic \
     vendor/amlogic/g12-common/proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.4-service.widevine \
     vendor/amlogic/g12-common/proprietary/vendor/bin/hw/android.hardware.dumpstate@1.1-service.droidlogic:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.dumpstate@1.1-service.droidlogic \
     vendor/amlogic/g12-common/proprietary/vendor/bin/hw/android.hardware.graphics.allocator@4.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.graphics.allocator@4.0-service \
@@ -43,6 +48,8 @@ PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/vendor/bin/hw/android.hardware.usb.gadget@1.2-service.droidlogic:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.usb.gadget@1.2-service.droidlogic \
     vendor/amlogic/g12-common/proprietary/vendor/bin/remotecfg:$(TARGET_COPY_OUT_VENDOR)/bin/remotecfg \
     vendor/amlogic/g12-common/proprietary/vendor/bin/systemcontrol:$(TARGET_COPY_OUT_VENDOR)/bin/systemcontrol \
+    vendor/amlogic/g12-common/proprietary/vendor/bin/tee-supplicant:$(TARGET_COPY_OUT_VENDOR)/bin/tee-supplicant \
+    vendor/amlogic/g12-common/proprietary/vendor/bin/tee_preload_fw:$(TARGET_COPY_OUT_VENDOR)/bin/tee_preload_fw \
     vendor/amlogic/g12-common/proprietary/vendor/etc/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
     vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/auto_pairing.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/auto_pairing.conf \
     vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/blacklist.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/blacklist.conf \
@@ -50,6 +57,7 @@ PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/vendor/etc/bluetooth/bt_vendor_usb.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_usb.conf \
     vendor/amlogic/g12-common/proprietary/vendor/etc/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-droidlogic.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.boot@1.1-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.boot@1.1-service.droidlogic.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.dumpstate@1.1-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.dumpstate@1.1-service.droidlogic.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service.rc \
@@ -66,6 +74,8 @@ PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/power.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/power.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/sysfs_permissions.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/sysfs_permissions.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/systemcontrol.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/systemcontrol.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/tee-supplicant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee-supplicant.rc \
+    vendor/amlogic/g12-common/proprietary/vendor/etc/init/tee_preload_fw.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_preload_fw.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/lowmemorykiller.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lowmemorykiller.txt \
     vendor/amlogic/g12-common/proprietary/vendor/etc/lowmemorykiller_2G.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lowmemorykiller_2G.txt \
     vendor/amlogic/g12-common/proprietary/vendor/etc/lowmemorykiller_512M.txt:$(TARGET_COPY_OUT_VENDOR)/etc/lowmemorykiller_512M.txt \
@@ -92,6 +102,7 @@ PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/vendor/lib/firmware/video/h264_enc.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/video/h264_enc.bin \
     vendor/amlogic/g12-common/proprietary/vendor/lib/firmware/video/video_ucode.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/video/video_ucode.bin \
     vendor/amlogic/g12-common/proprietary/vendor/lib/hw/android.hardware.bluetooth@1.0-impl-droidlogic.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.bluetooth@1.0-impl-droidlogic.so \
+    vendor/amlogic/g12-common/proprietary/vendor/lib/hw/android.hardware.boot@1.0-impl-1.1.droidlogic.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.boot@1.0-impl-1.1.droidlogic.so \
     vendor/amlogic/g12-common/proprietary/vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-arm.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.allocator@4.0-impl-arm.so \
     vendor/amlogic/g12-common/proprietary/vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-arm.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.mapper@4.0-impl-arm.so \
     vendor/amlogic/g12-common/proprietary/vendor/lib/hw/android.hardware.health@2.0-impl-2.1.droidlogic.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.health@2.0-impl-2.1.droidlogic.so \
@@ -151,6 +162,8 @@ PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/vendor/lib/libsonic_ext.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsonic_ext.so \
     vendor/amlogic/g12-common/proprietary/vendor/lib/libstagefrighthw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefrighthw.so \
     vendor/amlogic/g12-common/proprietary/vendor/lib/libsystemcontrolservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsystemcontrolservice.so \
+    vendor/amlogic/g12-common/proprietary/vendor/lib/libtee_load_video_fw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtee_load_video_fw.so \
+    vendor/amlogic/g12-common/proprietary/vendor/lib/libteec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libteec.so \
     vendor/amlogic/g12-common/proprietary/vendor/lib/libthreadworker_alt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libthreadworker_alt.so \
     vendor/amlogic/g12-common/proprietary/vendor/lib/libvideotunnel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideotunnel.so \
     vendor/amlogic/g12-common/proprietary/vendor/lib/libwvhidl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwvhidl.so \
@@ -190,6 +203,7 @@ PRODUCT_PACKAGES += \
     DeadpoolService \
     DfuService \
     droidlogic.software.core \
+    android.hardware.boot@1.1.droidlogic \
     android.hardware.dumpstate@1.1-service.droidlogic \
     android.hardware.graphics.composer@2.4-service.droidlogic \
     android.hardware.health@2.1-servcie.droidlogic \
@@ -203,23 +217,17 @@ ifneq ($(TARGET_HAS_TEE),false)
 PRODUCT_COPY_FILES += \
     vendor/amlogic/g12-common/proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.playready:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.4-service.playready \
     vendor/amlogic/g12-common/proprietary/vendor/bin/hw/android.hardware.security.keymint-service.amlogic:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.security.keymint-service.amlogic \
-    vendor/amlogic/g12-common/proprietary/vendor/bin/tee-supplicant:$(TARGET_COPY_OUT_VENDOR)/bin/tee-supplicant \
     vendor/amlogic/g12-common/proprietary/vendor/bin/tee_hdcp:$(TARGET_COPY_OUT_VENDOR)/bin/tee_hdcp \
     vendor/amlogic/g12-common/proprietary/vendor/bin/tee_key_inject:$(TARGET_COPY_OUT_VENDOR)/bin/tee_key_inject \
-    vendor/amlogic/g12-common/proprietary/vendor/bin/tee_preload_fw:$(TARGET_COPY_OUT_VENDOR)/bin/tee_preload_fw \
     vendor/amlogic/g12-common/proprietary/vendor/etc/drm/playready/bgroupcert.dat:$(TARGET_COPY_OUT_VENDOR)/etc/drm/playready/bgroupcert.dat \
     vendor/amlogic/g12-common/proprietary/vendor/etc/drm/playready/zgpriv.dat:$(TARGET_COPY_OUT_VENDOR)/etc/drm/playready/zgpriv.dat \
     vendor/amlogic/g12-common/proprietary/vendor/etc/drm/playready/zgpriv_protected.dat:$(TARGET_COPY_OUT_VENDOR)/etc/drm/playready/zgpriv_protected.dat \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.playready.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.playready.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/android.hardware.security.keymint-service.amlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.amlogic.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/tee-supplicant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee-supplicant.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/tee_hdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_hdcp.rc \
     vendor/amlogic/g12-common/proprietary/vendor/etc/init/tee_key_inject.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_key_inject.rc \
-    vendor/amlogic/g12-common/proprietary/vendor/etc/init/tee_preload_fw.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_preload_fw.rc \
     vendor/amlogic/g12-common/proprietary/vendor/lib/libplayready.so:$(TARGET_COPY_OUT_VENDOR)/lib/libplayready.so \
-    vendor/amlogic/g12-common/proprietary/vendor/lib/libplayreadymediadrmplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libplayreadymediadrmplugin.so \
-    vendor/amlogic/g12-common/proprietary/vendor/lib/libtee_load_video_fw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtee_load_video_fw.so \
-    vendor/amlogic/g12-common/proprietary/vendor/lib/libteec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libteec.so
+    vendor/amlogic/g12-common/proprietary/vendor/lib/libplayreadymediadrmplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libplayreadymediadrmplugin.so
 
 PRODUCT_PACKAGES += \
     android.hardware.security.keymint-service.amlogic \
