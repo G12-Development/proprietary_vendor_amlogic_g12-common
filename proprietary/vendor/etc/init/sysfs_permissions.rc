@@ -110,6 +110,9 @@ on init
     chmod 0664 /sys/class/amaudio/debug
     chown system mediadrm /sys/class/amaudio/debug
 
+    chmod 0660 /sys/class/amaudio/codec_report_info
+    chown audioserver mediadrm  /sys/class/amaudio/codec_report_info
+
     #audio dsp
     chmod 0664 /sys/class/audiodsp/codec_fatal_err
     chown media system /sys/class/audiodsp/codec_fatal_err
@@ -149,6 +152,9 @@ on init
     chmod 0664 /sys/class/display/mode
     chown system system /sys/class/display/mode
 
+    chmod 0664 /sys/class/display/fr_hint
+    chown system system /sys/class/display/fr_hint
+
     chmod 0664 /sys/class/display/axis
     chown system graphics /sys/class/display/axis
 
@@ -161,6 +167,8 @@ on init
 
     chmod 0664 /sys/class/graphics/fb0/free_fb_mem
     chown system graphics /sys/class/graphics/fb0/free_fb_mem
+    chmod 0664 /sys/class/graphics/fb0/force_free_mem
+    chown system graphics /sys/class/graphics/fb0/force_free_mem
 
     #ppmgr
     chmod 0664 /sys/class/ppmgr/angle
@@ -222,6 +230,9 @@ on init
 
     chmod 0664 /sys/class/amhdmitx/amhdmitx0/hdr_cap
     chown system system /sys/class/amhdmitx/amhdmitx0/hdr_cap
+
+    chmod 0664 /sys/class/amhdmitx/amhdmitx0/hdr_priority_mode
+    chown system system /sys/class/amhdmitx/amhdmitx0/hdr_priority_mode
 
     chmod 0664 /sys/devices/virtual/amhdmitx/amhdmitx0/avmute
     chown system system /sys/devices/virtual/amhdmitx/amhdmitx0/avmute

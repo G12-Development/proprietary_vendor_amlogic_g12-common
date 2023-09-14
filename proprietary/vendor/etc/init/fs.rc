@@ -7,6 +7,8 @@ on fs
 
     restorecon_recursive /mnt/vendor/param
 
+    verity_update_state
+
 on late-fs
     # Wait for keymaster
     exec_start wait_for_keymaster
@@ -30,5 +32,4 @@ on post-fs-data
     setprop vold.post_fs_data_done 1
 
 on init
-    # lz4 performance much better than lzo
     write /sys/block/zram0/comp_algorithm zstd
